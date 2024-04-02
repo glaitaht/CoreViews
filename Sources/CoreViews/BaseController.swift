@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 open class BaseController: UIViewController {
     

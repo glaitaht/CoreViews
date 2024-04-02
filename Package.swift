@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CoreViews",
-            targets: ["CoreViews"]),
+            targets: ["CoreViews", "CoreViewsLogManager"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,6 +23,11 @@ let package = Package(
         .target(
             name: "CoreViews",
             dependencies: ["Alamofire"]),
+        .target(
+            name: "CoreViewsLogManager",
+            dependencies: [],
+            path: "Sources/CoreLog"
+        ),
         .testTarget(
             name: "CoreViewsTests",
             dependencies: ["CoreViews"]),
